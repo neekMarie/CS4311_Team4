@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.aerialglass.fpm.Activities.MainActivity" >
+
+    <Button
+        android:id="@+id/btnPreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="onClick_Preferences"
+        android:text="Preferences Demo" />
+
+    <Button
+        android:id="@+id/btnCreateFlightPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnPreferences"
+        android:layout_below="@+id/btnPreferences"
+        android:onClick="onClick_CreateFlightPlan"
+        android:text="Crate Flight Plan Demo" />
+
+    <Button
+        android:onClick="onClick_FlightMonitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flight Monitor Demo"
+        android:id="@+id/btnFlightMonitor"
+        android:layout_below="@+id/btnCreateFlightPlan"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

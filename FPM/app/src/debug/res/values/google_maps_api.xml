@@ -1,0 +1,18 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=CA:3F:68:30:26:1D:6D:C4:90:5A:5C:4A:BF:33:FB:B1:88:FB:57:B2%3Bcom.aerialglass.fpm
+
+    You can also add your credentials to an existing key, using this line:
+    CA:3F:68:30:26:1D:6D:C4:90:5A:5C:4A:BF:33:FB:B1:88:FB:57:B2;com.aerialglass.fpm
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+        AIzaSyD3LqjxOKTRvD6AaBEMWjJublGxs2zF5-E
+    </string>
+</resources>

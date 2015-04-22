@@ -1,0 +1,191 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#151515"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="8"
+    tools:context="com.aerialglass.fpm.Activities.PreferencesActivity" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#151515"
+            android:orientation="vertical"
+            android:weightSum="6" >
+
+            <TextView
+                android:id="@+id/tvAvoidTerrain"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:background="#1f1f1f"
+                android:text="Avoid terrain above altitude:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <EditText
+                    android:id="@+id/etAvoidTerrain"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.8"
+                    android:background="#1f1f1f"
+                    android:ems="10"
+                    android:textColor="#ffffff" />
+
+                <CheckBox
+                    android:id="@+id/chkAvoidTerrain"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2"
+                    android:background="#1f1f1f"
+                    android:onClick="onClick_AvoidTerrain"
+                    android:text=""
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <TextView
+                    android:id="@+id/tvAvoidWater"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.8"
+                    android:background="#1f1f1f"
+                    android:text="Avoid terrain with water"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffff" />
+
+                <CheckBox
+                    android:id="@+id/chkAvoidWater"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2"
+                    android:background="#1f1f1f"
+                    android:onClick="onClick_AvoidWater"
+                    android:text=""
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2.5" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/tvAvoidSelectedAirports"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.8"
+            android:background="#1f1f1f"
+            android:text="Avoid selected airports"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff" />
+
+        <CheckBox
+            android:id="@+id/chkAvoidAirports"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.2"
+            android:background="#1f1f1f"
+            android:onClick="onClick_AvoidAirports"
+            android:text=""
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/tvAirportList"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="#1f1f1f"
+            android:text="Airports"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tvAvoidAirportList"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="#1f1f1f"
+            android:text="Avoid list"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <ListView
+            android:id="@+id/lvAirports"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="#1f1f1f"
+            android:textColor="#ffffff" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/lvAirportsAvoid"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="#1f1f1f"
+            android:textColor="#ffffff" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>
